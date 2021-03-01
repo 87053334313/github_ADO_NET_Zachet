@@ -54,46 +54,52 @@ namespace Furry_Community
         OleDbDataAdapter Myadapter5;
         private void Form1_Load(object sender, EventArgs e)
         {
-            //для первой кнопки таблица
-            OleDbConnection connection = new OleDbConnection(StrConnection);
-            
-
-            DataTable t_allOfMe = new DataTable("engineering.it_is_me");
-            MyDataAdapter1 = new OleDbDataAdapter("SELECT * FROM  [engineering].[it_is_me];", connection);
-            MyDataSet.Tables.Add(t_allOfMe);
-            MyDataAdapter1.Fill(MyDataSet.Tables["engineering.it_is_me"]);
-            OleDbCommandBuilder AllComands = new OleDbCommandBuilder(MyDataAdapter1);
+            try
+            {
+                //для первой кнопки таблица
+                OleDbConnection connection = new OleDbConnection(StrConnection);
 
 
-            //для второй кнопки таблица
-            DataTable t_myHelp = new DataTable("t_MyHelp");
-            MyAdapter2 = new OleDbDataAdapter("SELECT * FROM   [HELP].[help];", connection);
-            MyDataSet.Tables.Add(t_myHelp);
-            MyAdapter2.Fill(MyDataSet.Tables["t_MyHelp"]);
-            OleDbCommandBuilder AllComands2 = new OleDbCommandBuilder(MyAdapter2);
+                DataTable t_allOfMe = new DataTable("engineering.it_is_me");
+                MyDataAdapter1 = new OleDbDataAdapter("SELECT * FROM  [engineering].[it_is_me];", connection);
+                MyDataSet.Tables.Add(t_allOfMe);
+                MyDataAdapter1.Fill(MyDataSet.Tables["engineering.it_is_me"]);
+                OleDbCommandBuilder AllComands = new OleDbCommandBuilder(MyDataAdapter1);
+
+
+                //для второй кнопки таблица
+                DataTable t_myHelp = new DataTable("t_MyHelp");
+                MyAdapter2 = new OleDbDataAdapter("SELECT * FROM   [HELP].[help];", connection);
+                MyDataSet.Tables.Add(t_myHelp);
+                MyAdapter2.Fill(MyDataSet.Tables["t_MyHelp"]);
+                OleDbCommandBuilder AllComands2 = new OleDbCommandBuilder(MyAdapter2);
 
 
 
-            // для третьей кнопки
-            DataTable table_3 = new DataTable("Table3");
-            adapter3 = new OleDbDataAdapter("SELECT * FROM [HELP].[I_found];", connection);
-            MyDataSet.Tables.Add(table_3);
-            adapter3.Fill(MyDataSet.Tables["Table3"]);
-            OleDbCommandBuilder AllComands3 = new OleDbCommandBuilder(adapter3);
+                // для третьей кнопки
+                DataTable table_3 = new DataTable("Table3");
+                adapter3 = new OleDbDataAdapter("SELECT * FROM [HELP].[I_found];", connection);
+                MyDataSet.Tables.Add(table_3);
+                adapter3.Fill(MyDataSet.Tables["Table3"]);
+                OleDbCommandBuilder AllComands3 = new OleDbCommandBuilder(adapter3);
 
-            //для четвертой кнопки
-            DataTable table4 = new DataTable("Table4");
-             MyAdapter4 = new OleDbDataAdapter("SELECT * FROM [SHELTER].[id_shelter];", connection);
-            MyDataSet.Tables.Add(table4);
-            MyAdapter4.Fill(MyDataSet.Tables["Table4"]);
-            OleDbCommandBuilder AllComands4 = new OleDbCommandBuilder(MyAdapter4);
-            //для пятой кнопки
-            DataTable table5 = new DataTable("Table5");
-            Myadapter5 = new OleDbDataAdapter(" SELECT * FROM [HELP].[I_have_lost];", connection);
-            MyDataSet.Tables.Add(table5);
-            Myadapter5.Fill(MyDataSet.Tables["Table5"]);
-            OleDbCommandBuilder AllComands5 = new OleDbCommandBuilder(Myadapter5);
-
+                //для четвертой кнопки
+                DataTable table4 = new DataTable("Table4");
+                MyAdapter4 = new OleDbDataAdapter("SELECT * FROM [SHELTER].[id_shelter];", connection);
+                MyDataSet.Tables.Add(table4);
+                MyAdapter4.Fill(MyDataSet.Tables["Table4"]);
+                OleDbCommandBuilder AllComands4 = new OleDbCommandBuilder(MyAdapter4);
+                //для пятой кнопки
+                DataTable table5 = new DataTable("Table5");
+                Myadapter5 = new OleDbDataAdapter(" SELECT * FROM [HELP].[I_have_lost];", connection);
+                MyDataSet.Tables.Add(table5);
+                Myadapter5.Fill(MyDataSet.Tables["Table5"]);
+                OleDbCommandBuilder AllComands5 = new OleDbCommandBuilder(Myadapter5);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message,"Исключение");
+            }
         }
 
          
@@ -111,12 +117,19 @@ namespace Furry_Community
 
         private void UpdateButton_Click(object sender, EventArgs e)
         {
-            MyDataSet.EndInit();
-            MyDataAdapter1.Update(MyDataSet.Tables["engineering.it_is_me"]);
-            MyAdapter2.Update(MyDataSet.Tables["t_MyHelp"]);
-            adapter3.Update(MyDataSet.Tables["Table3"]);
-            MyAdapter4.Update(MyDataSet.Tables["Table4"]);
-            Myadapter5.Update(MyDataSet.Tables["Table5"]);
+            try
+            {
+                MyDataSet.EndInit();
+                MyDataAdapter1.Update(MyDataSet.Tables["engineering.it_is_me"]);
+                MyAdapter2.Update(MyDataSet.Tables["t_MyHelp"]);
+                adapter3.Update(MyDataSet.Tables["Table3"]);
+                MyAdapter4.Update(MyDataSet.Tables["Table4"]);
+                Myadapter5.Update(MyDataSet.Tables["Table5"]);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void button1_Click_1(object sender, EventArgs e)
