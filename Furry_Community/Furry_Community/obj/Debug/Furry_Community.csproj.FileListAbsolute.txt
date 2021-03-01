@@ -1,0 +1,10 @@
+C:\Users\VictorLi\Desktop\Git_hub_AdoNet_Zachetnaya_rabota\Furry_Community\Furry_Community\bin\Debug\Furry_Community.exe.config
+C:\Users\VictorLi\Desktop\Git_hub_AdoNet_Zachetnaya_rabota\Furry_Community\Furry_Community\bin\Debug\Furry_Community.exe
+C:\Users\VictorLi\Desktop\Git_hub_AdoNet_Zachetnaya_rabota\Furry_Community\Furry_Community\bin\Debug\Furry_Community.pdb
+C:\Users\VictorLi\Desktop\Git_hub_AdoNet_Zachetnaya_rabota\Furry_Community\Furry_Community\obj\Debug\Furry_Community.csprojAssemblyReference.cache
+C:\Users\VictorLi\Desktop\Git_hub_AdoNet_Zachetnaya_rabota\Furry_Community\Furry_Community\obj\Debug\Furry_Community.Form1.resources
+C:\Users\VictorLi\Desktop\Git_hub_AdoNet_Zachetnaya_rabota\Furry_Community\Furry_Community\obj\Debug\Furry_Community.Properties.Resources.resources
+C:\Users\VictorLi\Desktop\Git_hub_AdoNet_Zachetnaya_rabota\Furry_Community\Furry_Community\obj\Debug\Furry_Community.csproj.GenerateResource.cache
+C:\Users\VictorLi\Desktop\Git_hub_AdoNet_Zachetnaya_rabota\Furry_Community\Furry_Community\obj\Debug\Furry_Community.csproj.CoreCompileInputs.cache
+C:\Users\VictorLi\Desktop\Git_hub_AdoNet_Zachetnaya_rabota\Furry_Community\Furry_Community\obj\Debug\Furry_Community.exe
+C:\Users\VictorLi\Desktop\Git_hub_AdoNet_Zachetnaya_rabota\Furry_Community\Furry_Community\obj\Debug\Furry_Community.pdb
